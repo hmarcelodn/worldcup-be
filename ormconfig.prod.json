@@ -1,0 +1,24 @@
+{
+    "type": "postgres",
+    "host": "webapp-postgresqldbserver-eccb73c4-36228.postgres.database.azure.com",
+    "port": 5432,
+    "username": "pwaprode@webapp-postgresqldbserver-eccb73c4-36228",
+    "password": "Prode2018",
+    "database": "worldcup_production",
+    "synchronize": false,
+    "logging": true,
+    "entities": [
+       "entity/**/*.js"
+    ],
+    "migrations": [
+       "migration/**/*.js"
+    ],
+    "subscribers": [
+       "subscriber/**/*.js"
+    ],
+    "cli": {
+       "entitiesDir": "entity",
+       "migrationsDir": "migration",
+       "subscribersDir": "subscriber"
+    }
+ }

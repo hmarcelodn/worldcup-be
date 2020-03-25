@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <body>
+        <div class="container">
+            <h1><%= homeTeamName %> - <%= awayTeamName %></h1>
+            <form method="POST" action="/api/match/<%= guid %>">
+                <div class="form-group">
+                    <label for="homeTeam"><%= homeTeamName %></label>
+                    <input type="number" class="form-control" id="inputHomeTeam" name="inputHomeTeam" placeholder="0" value="<%= homeTeamGoals %>">
+                </div>
+                <div class="form-group">
+                    <label for="inputAwayTeam"><%= awayTeamName %></label>
+                    <input type="number" class="form-control" id="inputAwayTeam" name="inputAwayTeam" placeholder="0" value="<%= awayTeamGoals %>">
+                </div>   
+                <div class="form-group">
+                    <label for="video"><%= awayTeamName %></label>
+                    <input type="input" class="form-control" id="video" name="video" placeholder="https://www.youtube.com/watch?v=zMMQ1rSF44I&feature=onebox" value="<%= video %>">
+                </div>                   
+                <input class="btn btn-primary" type="submit" value="ACTUALIZAR" />
+                <a href="/api/match/index">VOLVER</a>
+            </form>
+        </div>
+    </body>
+</html>

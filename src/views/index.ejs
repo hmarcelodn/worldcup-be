@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
+                    Jugador24
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.css">
+    
+    <body>
+        <div class="container"> 
+            <h3>Partidos World Cup 2018</h3> 
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Home</th>
+                    <th scope="col">Away</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <% matches.forEach(function(match) { %>
+                    <tr>
+                        <th><%= match.matchDate %></th>
+                        <td>
+                            <span class="flag-icon flag-icon-<%= match.homeIso2 %>"></span>
+                            <%= match.homeTeamName %>
+                        </td>
+                        <td>
+                            <span class="flag-icon flag-icon-<%= match.awayIso2 %>"></span>
+                            <%= match.awayTeamName %>
+                        </td>
+                        <td>
+                            <a href="/api/match/index/<%= match.guid %>">CARGAR</a>
+                            <%if (!match.isFinished) { %>                                
+                                <a href="/api/match/compute/<%= match.guid %>">COMPUTAR</a>
+                            <% } else { %>
+                                <p>TERMINADO</p>
+                            <% } %>
+                        </td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>             
+        </div>
+    </body>
+
+    <p class="text-center text-muted">© Todos los derechos reservados 2018 www.jugador24.com</p>
+</html>
+

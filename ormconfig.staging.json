@@ -1,0 +1,24 @@
+{
+    "type": "postgres",
+    "host": "devolodog.postgres.database.azure.com",
+    "port": 5432,
+    "username": "devolodog@devolodog",
+    "password": "Marcelo1988",
+    "database": "app_development",
+    "synchronize": false,
+    "logging": true,
+    "entities": [
+       "entity/**/*.js"
+    ],
+    "migrations": [
+       "migration/**/*.js"
+    ],
+    "subscribers": [
+       "subscriber/**/*.js"
+    ],
+    "cli": {
+       "entitiesDir": "entity",
+       "migrationsDir": "migration",
+       "subscribersDir": "subscriber"
+    }
+ }
