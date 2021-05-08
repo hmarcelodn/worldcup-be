@@ -39,7 +39,7 @@
       "socket-controllers": "0.0.3",
       "twitter": "^1.7.1",
       "typedi": "^0.7.3",
-      "typeorm": "^0.2.5",
+      "typeorm": "^0.2.25",
       "typeorm-routing-controllers-extensions": "^0.2.0",
       "uuid": "^3.2.1",
       "xss": "^1.0.3"
