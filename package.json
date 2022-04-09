@@ -29,7 +29,7 @@
       "jade": "^1.11.0",
       "jsonwebtoken": "^8.2.1",
       "lodash": "^4.17.10",
-      "moment": "^2.22.2",
+      "moment": "^2.29.2",
       "password-sheriff": "^1.1.0",
       "password-validator": "^4.1.1",
       "pg": "^7.3.0",
