@@ -27,7 +27,7 @@
       "express": "^4.16.3",
       "guid": "0.0.12",
       "jade": "^1.11.0",
-      "jsonwebtoken": "^8.2.1",
+      "jsonwebtoken": "^9.0.0",
       "lodash": "^4.17.10",
       "moment": "^2.22.2",
       "password-sheriff": "^1.1.0",
